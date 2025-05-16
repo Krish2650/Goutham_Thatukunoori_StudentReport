@@ -1,0 +1,187 @@
+[
+  {
+    "studentInfo": {
+      "name": "Rakesh",
+      "photo": "assets/placeholder.jpg",
+      "rollNo": "12345",
+      "class": "10A",
+      "dob": "2008-04-15"
+    },
+    "term1Report": {
+      "subjects": [
+        { "name": "Math", "marks": 88, "grade": "A", "teacherRemarks": "Excellent" },
+        { "name": "Science", "marks": 92, "grade": "A+", "teacherRemarks": "Outstanding" },
+        { "name": "English", "marks": 65, "grade": "B", "teacherRemarks": "Good effort" },
+        { "name": "History", "marks": 55, "grade": "C", "teacherRemarks": "Needs improvement" },
+        { "name": "Geography", "marks": 33, "grade": "F", "teacherRemarks": "Poor performance" }
+      ],
+      "overallSummary": {
+        "average": 66.6,
+        "grade": "B",
+        "attendance": 93
+      }
+    },
+    "term2Report": {
+      "subjects": [
+        { "name": "Math", "marks": 90, "grade": "A+", "teacherRemarks": "Brilliant" },
+        { "name": "Science", "marks": 85, "grade": "A", "teacherRemarks": "Very Good" },
+        { "name": "English", "marks": 78, "grade": "B+", "teacherRemarks": "Improved" },
+        { "name": "History", "marks": 45, "grade": "C", "teacherRemarks": "Satisfactory" },
+        { "name": "Geography", "marks": 25, "grade": "F", "teacherRemarks": "Failing" }
+      ],
+      "overallSummary": {
+        "average": 64.6,
+        "grade": "C+",
+        "attendance": 89
+      }
+    }
+  },
+  {
+    "studentInfo": {
+      "name": "Vishal",
+      "photo": "assets/placeholder.jpg",
+      "rollNo": "12346",
+      "class": "10A",
+      "dob": "2008-05-22"
+    },
+    "term1Report": {
+      "subjects": [
+        { "name": "Math", "marks": 78, "grade": "B", "teacherRemarks": "Good" },
+        { "name": "Science", "marks": 82, "grade": "B+", "teacherRemarks": "Well done" },
+        { "name": "English", "marks": 70, "grade": "B", "teacherRemarks": "Consistent" },
+        { "name": "History", "marks": 60, "grade": "C+", "teacherRemarks": "Satisfactory" },
+        { "name": "Geography", "marks": 40, "grade": "D", "teacherRemarks": "Needs focus" }
+      ],
+      "overallSummary": {
+        "average": 66,
+        "grade": "B",
+        "attendance": 95
+      }
+    },
+    "term2Report": {
+      "subjects": [
+        { "name": "Math", "marks": 88, "grade": "A", "teacherRemarks": "Improved" },
+        { "name": "Science", "marks": 80, "grade": "B+", "teacherRemarks": "Good" },
+        { "name": "English", "marks": 75, "grade": "B+", "teacherRemarks": "Good effort" },
+        { "name": "History", "marks": 58, "grade": "C", "teacherRemarks": "Needs work" },
+        { "name": "Geography", "marks": 38, "grade": "F", "teacherRemarks": "Failing" }
+      ],
+      "overallSummary": {
+        "average": 67.8,
+        "grade": "B",
+        "attendance": 92
+      }
+    }
+  },
+  {
+    "studentInfo": {
+      "name": "Harshit",
+      "photo": "assets/placeholder.jpg",
+      "rollNo": "12347",
+      "class": "10A",
+      "dob": "2008-07-10"
+    },
+    "term1Report": {
+      "subjects": [
+        { "name": "Math", "marks": 92, "grade": "A+", "teacherRemarks": "Outstanding" },
+        { "name": "Science", "marks": 95, "grade": "A+", "teacherRemarks": "Excellent" },
+        { "name": "English", "marks": 85, "grade": "A", "teacherRemarks": "Very Good" },
+        { "name": "History", "marks": 70, "grade": "B", "teacherRemarks": "Good" },
+        { "name": "Geography", "marks": 60, "grade": "B-", "teacherRemarks": "Improving" }
+      ],
+      "overallSummary": {
+        "average": 80.4,
+        "grade": "A",
+        "attendance": 98
+      }
+    },
+    "term2Report": {
+      "subjects": [
+        { "name": "Math", "marks": 95, "grade": "A+", "teacherRemarks": "Excellent" },
+        { "name": "Science", "marks": 90, "grade": "A+", "teacherRemarks": "Great" },
+        { "name": "English", "marks": 80, "grade": "A", "teacherRemarks": "Consistent" },
+        { "name": "History", "marks": 72, "grade": "B", "teacherRemarks": "Good work" },
+        { "name": "Geography", "marks": 65, "grade": "B", "teacherRemarks": "Good" }
+      ],
+      "overallSummary": {
+        "average": 80.4,
+        "grade": "A",
+        "attendance": 96
+      }
+    }
+  },
+  {
+    "studentInfo": {
+      "name": "Manikantha",
+      "photo": "assets/placeholder.jpg",
+      "rollNo": "12348",
+      "class": "10A",
+      "dob": "2008-03-30"
+    },
+    "term1Report": {
+      "subjects": [
+        { "name": "Math", "marks": 60, "grade": "C", "teacherRemarks": "Average" },
+        { "name": "Science", "marks": 55, "grade": "C", "teacherRemarks": "Needs improvement" },
+        { "name": "English", "marks": 58, "grade": "C", "teacherRemarks": "Satisfactory" },
+        { "name": "History", "marks": 50, "grade": "C-", "teacherRemarks": "Could do better" },
+        { "name": "Geography", "marks": 45, "grade": "D", "teacherRemarks": "Slow progress" }
+      ],
+      "overallSummary": {
+        "average": 53.6,
+        "grade": "C-",
+        "attendance": 85
+      }
+    },
+    "term2Report": {
+      "subjects": [
+        { "name": "Math", "marks": 65, "grade": "C", "teacherRemarks": "Improved" },
+        { "name": "Science", "marks": 60, "grade": "C", "teacherRemarks": "Steady" },
+        { "name": "English", "marks": 62, "grade": "B-", "teacherRemarks": "Better" },
+        { "name": "History", "marks": 55, "grade": "C", "teacherRemarks": "Consistent" },
+        { "name": "Geography", "marks": 50, "grade": "C-", "teacherRemarks": "Slow but steady" }
+      ],
+      "overallSummary": {
+        "average": 58.4,
+        "grade": "B-",
+        "attendance": 87
+      }
+    }
+  },
+  {
+    "studentInfo": {
+      "name": "Yogesh",
+      "photo": "assets/placeholder.jpg",
+      "rollNo": "12349",
+      "class": "10A",
+      "dob": "2008-12-05"
+    },
+    "term1Report": {
+      "subjects": [
+        { "name": "Math", "marks": 82, "grade": "A-", "teacherRemarks": "Good work" },
+        { "name": "Science", "marks": 80, "grade": "B+", "teacherRemarks": "Well done" },
+        { "name": "English", "marks": 75, "grade": "B+", "teacherRemarks": "Consistent" },
+        { "name": "History", "marks": 70, "grade": "B", "teacherRemarks": "Good" },
+        { "name": "Geography", "marks": 68, "grade": "B", "teacherRemarks": "Solid" }
+      ],
+      "overallSummary": {
+        "average": 75,
+        "grade": "B+",
+        "attendance": 90
+      }
+    },
+    "term2Report": {
+      "subjects": [
+        { "name": "Math", "marks": 85, "grade": "A", "teacherRemarks": "Improved" },
+        { "name": "Science", "marks": 78, "grade": "B+", "teacherRemarks": "Good" },
+        { "name": "English", "marks": 80, "grade": "A-", "teacherRemarks": "Great" },
+        { "name": "History", "marks": 75, "grade": "B", "teacherRemarks": "Good" },
+        { "name": "Geography", "marks": 70, "grade": "B+", "teacherRemarks": "Solid" }
+      ],
+      "overallSummary": {
+        "average": 77.6,
+        "grade": "B+",
+        "attendance": 92
+      }
+    }
+  }
+]

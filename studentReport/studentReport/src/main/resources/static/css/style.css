@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 20px;
+}
+
+.report-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+}
+
+.student-info {
+  text-align: center;
+}
+
+.student-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.term-report {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.fail {
+  color: red;
+  font-weight: bold;
+}
+
+.gold-border {
+  border: 3px solid gold;
+}
+
+.silver-border {
+  border: 3px solid silver;
+  margin-top: 15px;
+}
