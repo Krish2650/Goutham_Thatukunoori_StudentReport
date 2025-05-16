@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Student Report Card</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0; padding: 20px;
+    text-align: center;
+  }
+  h1.college-name {
+    color: goldenrod;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .input-section {
+    margin-bottom: 30px;
+  }
+  input[type="number"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 180px;
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-left: 10px;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  button:hover {
+    background-color: darkgoldenrod;
+  }
+  .report-card {
+    max-width: 600px;
+    background: white;
+    margin: 0 auto 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  .header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .photo {
+    width: 90px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid goldenrod;
+  }
+  .student-info h2 {
+    margin: 0 0 6px 0;
+    font-weight: 700;
+    color: goldenrod;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    text-align: left;
+  }
+  th {
+    background: goldenrod;
+    color: white;
+    font-weight: 700;
+  }
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .signatures {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+  }
+  .signature-box {
+    border-top: 1px solid #999;
+    padding-top: 5px;
+    width: 45%;
+    font-style: italic;
+    color: #555;
+  }
+  footer {
+    text-align: center;
+    font-weight: 600;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+  .error {
+    color: red;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="college-name">Krishnas Education System</h1>
+
+<div class="input-section">
+  <label for="rollNoInput">Enter Roll No (101 - 105): </label>
+  <input type="number" id="rollNoInput" min="101" max="105" />
+  <button onclick="showReport()">Show Report</button>
+</div>
+
+<div id="reportContainer"></div>
+
+<script>
+const students = {
+  101: {
+    photo: "https://via.placeholder.com/90x110?text=John",
+    name: "John Doe",
+    rollNo: 101,
+    class: "10A",
+    dob: "2008-04-15",
+    subjects: [
+      {name: "Math", marks: 90, grade: "A+", remarks: "Brilliant"},
+      {name: "Science", marks: 85, grade: "A", remarks: "Very Good"},
+      {name: "English", marks: 78, grade: "B+", remarks: "Improved"},
+      {name: "History", marks: 45, grade: "C", remarks: "Satisfactory"},
+      {name: "Geography", marks: 25, grade: "F", remarks: "Failing"},
+    ],
+    average: 64.6,
+    finalGrade: "C+",
+    attendance: 89,
+  },
+  102: {
+    photo: "https://via.placeholder.com/90x110?text=Emma",
+    name: "Emma Watson",
+    rollNo: 102,
+    class: "10B",
+    dob: "2008-07-20",
+    subjects: [
+      {name: "Math", marks: 95, grade: "A+", remarks: "Excellent"},
+      {name: "Science", marks: 90, grade: "A+", remarks: "Outstanding"},
+      {name: "English", marks: 88, grade: "A", remarks: "Very Good"},
+      {name: "History", marks: 75, grade: "B+", remarks: "Good"},
+      {name: "Geography", marks: 80, grade: "A-", remarks: "Well Done"},
+    ],
+    average: 85.6,
+    finalGrade: "A",
+    attendance: 95,
+  },
+  103: {
+    photo: "https://via.placeholder.com/90x110?text=Alex",
+    name: "Alex Johnson",
+    rollNo: 103,
+    class: "10C",
+    dob: "2008-05-30",
+    subjects: [
+      {name: "Math", marks: 70, grade: "B", remarks: "Satisfactory"},
+      {name: "Science", marks: 65, grade: "C+", remarks: "Needs Improvement"},
+      {name: "English", marks: 72, grade: "B-", remarks: "Average"},
+      {name: "History", marks: 60, grade: "C", remarks: "Fair"},
+      {name: "Geography", marks: 55, grade: "C-", remarks: "Below Average"},
+    ],
+    average: 64.4,
+    finalGrade: "C",
+    attendance: 85,
+  },
+  104: {
+    photo: "https://via.placeholder.com/90x110?text=Sarah",
+    name: "Sarah Lee",
+    rollNo: 104,
+    class: "10D",
+    dob: "2008-08-10",
+    subjects: [
+      {name: "Math", marks: 88, grade: "A", remarks: "Good"},
+      {name: "Science", marks: 92, grade: "A+", remarks: "Excellent"},
+      {name: "English", marks: 85, grade: "A", remarks: "Very Good"},
+      {name: "History", marks: 78, grade: "B+", remarks: "Good Effort"},
+      {name: "Geography", marks: 80, grade: "A-", remarks: "Well Done"},
+    ],
+    average: 84.6,
+    finalGrade: "A",
+    attendance: 90,
+  },
+  105: {
+    photo: "https://via.placeholder.com/90x110?text=David",
+    name: "David Wilson",
+    rollNo: 105,
+    class: "10E",
+    dob: "2008-09-12",
+    subjects: [
+      {name: "Math", marks: 82, grade: "A-", remarks: "Good"},
+      {name: "Science", marks: 87, grade: "A", remarks: "Very Good"},
+      {name: "English", marks: 90, grade: "A+", remarks: "Excellent"},
+      {name: "History", marks: 76, grade: "B+", remarks: "Fair"},
+      {name: "Geography", marks: 85, grade: "A", remarks: "Very Good"},
+    ],
+    average: 84,
+    finalGrade: "A",
+    attendance: 96,
+  },
+};
+
+function showReport() {
+  const rollNo = document.getElementById("rollNoInput").value;
+  const container = document.getElementById("reportContainer");
+  container.innerHTML = "";
+
+  if (!rollNo || rollNo < 101 || rollNo > 105) {
+    container.innerHTML = `<p class="error">Please enter a valid roll number between 101 and 105.</p>`;
+    return;
+  }
+
+  const student = students[rollNo];
+
+  let subjectRows = "";
+  student.subjects.forEach(sub => {
+    subjectRows += `<tr>
+      <td>${sub.name}</td>
+      <td>${sub.marks}</td>
+      <td>${sub.grade}</td>
+      <td>${sub.remarks}</td>
+    </tr>`;
+  });
+
+  container.innerHTML = `
+    <div class="report-card">
+      <div class="header">
+        <img class="photo" src="${student.photo}" alt="${student.name}" />
+        <div class="student-info">
+          <h2>${student.name}</h2>
+          <p>Roll No: ${student.rollNo}</p>
+          <p>Class: ${student.class}</p>
+          <p>DOB: ${student.dob}</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Subject</th><th>Marks</th><th>Grade</th><th>Remarks</th></tr>
+        </thead>
+        <tbody>
+          ${subjectRows}
+        </tbody>
+      </table>
+      <div class="summary">
+        <div>Average Marks: ${student.average}</div>
+        <div>Final Grade: ${student.finalGrade}</div>
+        <div>Attendance: ${student.attendance}%</div>
+      </div>
+      <div class="signatures">
+        <div class="signature-box">Teacher's Signature</div>
+        <div class="signature-box">Parent's Signature</div>
+      </div>
+      <footer>ABC Public School</footer>
+    </div>
+  `;
+}
+</script>
+
+</body>
+</html>
