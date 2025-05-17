@@ -113,9 +113,6 @@ DELETE	/students/{id}	Delete a student record
 Goutham Thatukunoori
 
 🔗 LinkedIn
+https://www.linkedin.com/in/goutham-krishna-b977a9337
 
-📧 your.email@example.com
-
----
-
-Would you like me to generate separate README files for frontend and backend too? Or add instructions for deployment on GitHub Pages or Heroku?
+📧 gouthamthatukunoori@gmail.com
